@@ -3,22 +3,25 @@
   <div id="home">
     <h2>Quotify your thoughts</h2>
     <h5>inspire others through your daily thoughts</h5>
-    <button>Top 3 quotes</button>
-    <button>Add Quote</button>
-    <button>View Quotes</button>
+    <button id="one">Top 3 quotes</button>
+    <button id="two">Add Quote</button>
+    <button id="three">View Quotes</button>
   </div>
 </div>
-<h4>Top 3 Quotes today</h4>
 
-<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-<div *ngFor="let quote of quotes;let i = 'index'">
+<div class="row">
+  <div class="col-md-4">
+    <h4>Top 3 Quotes today</h4>
+    <div *ngFor="let quote of quotes;let i = 'index'">
+      <ul id="quotes">
+        <li>{{quote.name}}</li>
+        <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+      </ul>
 
-  <ul>
+  </div>
 
-    <li>{{quote.name}}</li>
-    <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
-
-  </ul>
+</div>
 
 
 </div>
+<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
