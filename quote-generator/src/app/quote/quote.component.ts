@@ -14,9 +14,14 @@ export class QuoteComponent implements OnInit {
     new Quote(3, 'Brenda Nekoye', 'Our greatest fear is not that we are inadequate but that we are powerfull, our playing small does not serve the world in anyway.'),
     new Quote(4, 'Lula Okiyo', 'stay hungry and stay foolish')
   ]
+  addNewQuote(quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    this.quotes.push(quote)
+
+  }
 
 
-  
   constructor() { }
 
   ngOnInit() {
