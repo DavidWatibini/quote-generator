@@ -8,6 +8,15 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
+  quotes = [
+    new Quote(1, 'Wati David', 'True success is impacting the world with the investment within your personality.'),
+    new Quote(2, 'Marvin Makhanu', 'Go big or simply go home.'),
+    new Quote(3, 'Brenda Nekoye', 'Our greatest fear is not that we are inadequate but that we are powerfull, our playing small does not serve the world in anyway.'),
+    new Quote(4, 'Lula Okiyo', 'stay hungry and stay foolish')
+  ]
+
+
+  
   constructor() { }
 
   ngOnInit() {

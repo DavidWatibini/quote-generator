@@ -1,5 +1,15 @@
-<p>
-  quote works!
-</p>
-<app-quote-details></app-quote-details>
-<app-quote-form></app-quote-form>
+<!-- <app-quotes-form>(addQuotes)="addNewQuotes($event)"</app-quotes-form> -->
+<h4>Top 3 Quotes today</h4>
+
+<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+<div *ngFor="let quote of quotes;let i = 'index'">
+
+  <ul>
+
+    <li>{{quote.name}}</li>
+    <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+
+  </ul>
+
+
+</div>
