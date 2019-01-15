@@ -7,6 +7,8 @@ import { Quote } from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  public show:boolean = false;
+  public buttonName:any = 'Show';
 
   quotes = [
     new Quote(1, 'Wati David', 'True success is impacting the world with the investment within your personality.'),
@@ -21,6 +23,7 @@ export class QuoteComponent implements OnInit {
 
   }
 
+
   deleteQuote(isComplete, index) {
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
@@ -29,9 +32,12 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  constructor() { }
 
-  ngOnInit() {
-  }
+
+
+constructor() { }
+
+ngOnInit() { }
+
 
 }
