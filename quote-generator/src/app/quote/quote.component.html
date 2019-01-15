@@ -15,7 +15,7 @@
       <h4 id="pad">Top 3 Quotes today</h4>
       <div *ngFor="let quote of quotes;let i = 'index'">
         <ul id="quotes">
-          <li>{{quote.name}}</li>
+          <li>{{quote.publisher}}</li>
           <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
         </ul>
 
