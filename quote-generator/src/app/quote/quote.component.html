@@ -5,7 +5,7 @@
   <div id="home">
     <h2>Quotify your thoughts</h2>
     <h5>inspire others through your daily thoughts</h5>
-    <button id="one" (click)='toogleDetails(i)'>Top 3 quotes</button>
+    <button id="one">Top 3 quotes</button>
     <button id="two">Add Quote</button>
     <button id="three">View Quotes</button>
   </div>
@@ -15,7 +15,7 @@
 <div id="next">
   <div class="row">
     <div class="col4 inner-left">
-
+      
       <h4 id="pad">Top 3 Quotes today</h4>
       <div *ngFor="let quote of quotes;let i = 'index'">
         <ul id="quotes">
@@ -24,9 +24,10 @@
           <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
         </ul>
 
-      </div>
     </div>
+
   </div>
+</div>
 
 
 
