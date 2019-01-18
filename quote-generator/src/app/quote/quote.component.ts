@@ -11,10 +11,10 @@ export class QuoteComponent implements OnInit {
   public buttonName:any = 'Show';
 
   quotes = [
-    new Quote(1, 'Wati David', 'Martin Luther King', 'True success is impacting the world with the investment within your personality.'),
-    new Quote(2, 'Marvin Makhanu', 'Gay Jones', 'Go big or simply go home.'),
-    new Quote(3, 'Brenda Nekoye', 'Canta Makenzi', 'Our greatest fear is not that we are inadequate but that we are powerfull, our playing small does not serve the world in anyway.'),
-    new Quote(4, 'Lula Okiyo', 'Tobias Orao', 'stay hungry and stay foolish')
+    new Quote(1, 'Wati David', 'Martin Luther King', 'True success is impacting the world with the investment within your personality', new Date(2019,0,12)),
+    new Quote(2, 'Marvin Makhanu', 'Gay Jones', 'Go big or simply go home', new Date(2019,0,16)),
+    new Quote(3, 'Brenda Nekoye', 'Canta Makenzi', 'Our greatest fear is not that we are inadequate but that we are powerfull, our playing small does not serve the world in anyway', new Date(2019,0,5)),
+    new Quote(4, 'Lula Okiyo', 'Tobias Orao', 'stay hungry and stay foolish', new Date(2019,0,15))
   ]
   addNewQuote(quote) {
     let quoteLength = this.quotes.length;
